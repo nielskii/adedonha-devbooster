@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adedonha Pro</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+    <div class="game-card">
+        <form id="form-adedonha">
+            <header>
+                <div>
+                    <h1 style="margin:0; font-size: 1.5rem;">Stop Online</h1>
+                    <div class="time-options">
+                        <button type="button" class="time_btn" value="30">30s</button>
+                        <button type="button" class="time_btn" value="60">60s</button>
+                        <button type="button" class="time_btn" value="90">90s</button>
+                    </div>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 20px;">
+                    <div id="timer_display" class="timer_display">00:30</div>
+                    <div class="letra-display" id="letra_display"></div>
+                </div>
+            </header>
+
+            <main class="inputs-grid">
+                <div class="input-group"><label>👤 Nome</label><input type="text" name="nome"></div>
+                <div class="input-group"><label>🐾 Animal</label><input type="text" name="animal"></div>
+                <div class="input-group"><label>🍎 Fruta</label><input type="text" name="fruta"></div>
+                <div class="input-group"><label>🎨 Cor</label><input type="text" name="cor"></div>
+                <div class="input-group"><label>🎸 Objeto</label><input type="text" name="objeto"></div>
+                <div class="input-group"><label>🗺️ Lugar</label><input type="text" name="lugar"></div>
+            </main>
+
+            <footer class="footer-action">
+                <button type="submit" id="btn_stop" class="btn btn-stop" onclick="stop()">STOP!</button>
+            </footer>
+        </form>
+
+        <dialog id="modal_verificacao" class="modal">
+            <div class="modal-content">
+                <h2>Verificando Respostas...</h2>
+                <div id="lista_respostas"></div>
+                <div class="modal-actions" id="modal_view">
+                    <button type="button" id="btn-confirmar" class="btn-start">Confirmar Pontos</button>
+                    <button type="button" onclick="document.getElementById('modal-verificacao').close()" class="btn-stop">Fechar</button>
+                </div>
+            </div>
+        </dialog>
+    </div>
+
+    <aside class="ranking-lateral-card">
+        <div class="ranking-header">
+            <h2>🏆 Ranking</h2>
+        </div>
+        <div class="ranking-corpo" id="ranking-lista">
+            <div class="ranking-item">1. --- 0pts</div>
+            <div class="ranking-item">2. --- 0pts</div>
+            <div class="ranking-item">3. --- 0pts</div>
+            <div class="ranking-item">4. --- 0pts</div>
+            <div class="ranking-item">5. --- 0pts</div>
+        </div>
+    </aside>
+
+    <script defer src="/assets/js/script.js"></script>
+</body>
+</html>
